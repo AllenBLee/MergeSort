@@ -16,7 +16,7 @@ void msort(int a[], int x[], int s, int e) {
 		n++;
 	}
 
-	for (int i = 0; i<n; i += amount)
+	for (int i = 0; i < n; i += amount)
 	{
 		int j = amount*placeholderCount;
 		int sortEnd = j + amount - 1;
@@ -26,7 +26,7 @@ void msort(int a[], int x[], int s, int e) {
 			sortEnd = n;
 		}
 
-		for (int k = amount*placeholderCount; k<(sortEnd + 1); k++) {
+		for (int k = amount*placeholderCount; k < (sortEnd + 1); k++) {
 
 			if (j == (placeholderCount*amount) + (amount / 2)) {
 				x[k] = a[sortMiddle];
@@ -40,7 +40,7 @@ void msort(int a[], int x[], int s, int e) {
 				continue;
 			}
 
-			if ((a[sortMiddle]< a[j])) {
+			if ((a[sortMiddle] < a[j])) {
 				x[k] = a[sortMiddle];
 				sortMiddle++;
 			}
@@ -52,7 +52,7 @@ void msort(int a[], int x[], int s, int e) {
 		placeholderCount++;
 	}
 
-	for (int y = 0; y<n; y++) {
+	for (int y = 0; y < n; y++) {
 		a[y] = x[y];
 	}
 
